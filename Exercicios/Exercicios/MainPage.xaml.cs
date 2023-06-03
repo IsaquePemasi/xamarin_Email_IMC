@@ -17,7 +17,19 @@ namespace Exercicios
 
         private void btGerar_Clicked(object sender, EventArgs e)
         {
+            string nomeCompleto = etName.Text.Trim();
+            string[] partesNome = nomeCompleto.Split(' ');
 
+            if (partesNome.Length < 2)
+            {
+                throw new ArgumentException("O nome completo deve conter pelo menos um nome e um sobrenome.");
+            }
+
+            string sobrenome = partesNome[partesNome.Length - 1];
+            string nome = string.Join(" ", partesNome, 0, partesNome.Length - 1);
+            // Gere o email no formato desejado
+            string email = $"{sobrenome.ToLower()}{nome.ToLower()}@ufn.edu.br";
+            lbRespostaEmail.Text = email;
         }
 
         private void btIMC_Clicked(object sender, EventArgs e)
