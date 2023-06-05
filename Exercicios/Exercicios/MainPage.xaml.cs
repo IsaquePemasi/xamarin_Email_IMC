@@ -26,7 +26,7 @@ namespace Exercicios
             }
 
             string sobrenome = partesNome[partesNome.Length - 1];
-            string nome = string.Join(" ", partesNome, 0, partesNome.Length - 1);
+            string nome = partesNome[0];
             // Gere o email no formato desejado
             string email = $"{sobrenome.ToLower()}{nome.ToLower()}@ufn.edu.br";
             lbRespostaEmail.Text = email;
