@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercicios.MainPage">
+
+    <StackLayout>
+        <Label Text="Nome Completo: "/>
+        <Entry x:Name="etName" Placeholder="Digite seu nome"/>
+        <Button x:Name="btGerar" Text="Gerar email" Clicked="btGerar_Clicked"/>
+        <Label x:Name="lbRespostaEmail" Text=""/>
+        <Label Text="Peso (Kg): "/>
+        <Entry x:Name="etPeso" Keyboard="Numeric" Placeholder="Digite seu peso"/>
+        <Label Text="Altura (metro e centimetro): "/>
+        <Entry x:Name="etAltura" Keyboard="Numeric" Placeholder="Digite sua altura"/>
+        <Button x:Name="btIMC" Text="Gerar IMC" Clicked="btIMC_Clicked"/>
+        <Label x:Name="lbRespostaIMC" Text=""/>
+    </StackLayout>
+
+</ContentPage>
